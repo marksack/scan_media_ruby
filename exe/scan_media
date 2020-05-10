@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'scan_media'
+
+cli_runner = ScanMedia::CliRunner.new
+cli_runner.run
