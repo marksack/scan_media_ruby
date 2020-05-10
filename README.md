@@ -1,28 +1,21 @@
 # ScanMedia
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/scan_media`. To experiment with that code, run `bin/console` for an interactive prompt.
+ScanMedia scans directories for media files to extract their metadata. It is a
+work in progress and doesn't do much yet.
 
-TODO: Delete this and the text above, and describe your gem
+It is run as a command line executable.
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'scan_media'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
 
     $ gem install scan_media
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ scan_media -h
+    $ scan_media
+    $ scan_media -i input_path
+    $ scan_media -o output_file
+    $ scan_media -i input_path -i output_file
 
 ## Development
 
@@ -32,7 +25,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/marksack/scan_media.
+Bug reports and pull requests are welcome on GitHub at https://github.com/marksack/scan_media_ruby.
 
 
 ## License

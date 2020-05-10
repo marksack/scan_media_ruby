@@ -5,14 +5,10 @@ require 'shellwords'
 
 # Scans media files and extracts metadata
 class Scanner
-  def initialize(scan_path, output)
-    @scan_path = scan_path
+  def scan(scan_path, output)
     @output = output
-  end
-
-  def scan
-    scan_directory @scan_path if File.directory?(@scan_path)
-    scan_file @scan_path if File.file?(@scan_path)
+    scan_directory scan_path if File.directory?(scan_path)
+    scan_file scan_path if File.file?(scan_path)
   end
 
   private
@@ -27,7 +23,7 @@ class Scanner
   def scan_directory(input_dir)
     Dir.chdir File.expand_path(input_dir)
     Dir.glob('**/*').each do |f|
-      files_scanned += scan_file f unless File.directory?(f)
+      scan_file f unless File.directory?(f)
     end
   end
 end

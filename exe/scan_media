@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby
 
+require 'optimist'
 require 'scan_media'
 
+opts = Optimist.options do
+  opt :input, 'Input file/base of tree to scan', type: :string
+  opt :output, 'Destination to save results', type: :string
+end
 cli_runner = ScanMedia::CliRunner.new
-cli_runner.run
+cli_runner.run opts[:input], opts[:output]

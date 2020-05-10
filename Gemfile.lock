@@ -17,6 +17,7 @@ GEM
     optimist (3.0.1)
     rake (13.0.1)
     ruby-progressbar (1.10.1)
+    spy (1.0.0)
     taglib-ruby (1.0.1)
 
 PLATFORMS
@@ -29,6 +30,7 @@ DEPENDENCIES
   optimist
   rake (~> 13.0)
   scan_media!
+  spy (~> 1.0)
   taglib-ruby
 
 BUNDLED WITH
